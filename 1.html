@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Template</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<style>
+			.marquee-wrapper {
+				overflow: hidden;
+				padding: 60px 0;
+				background: #fff;
+				white-space: nowrap;
+				position: relative;
+				display: none;
+			}
+			.jquery-marquee img {
+				max-height: 50px;
+				margin: 0 40px;
+			}
+			.marquee-wrapper:before,
+			.marquee-wrapper:after {
+				position: absolute;
+				top: 0;
+				width: 250px;
+				height: 100%;
+				content: '';
+				z-index: 2;
+			}
+			.marquee-wrapper:before {
+				left: 0;
+				background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+			}
+			.marquee-wrapper:after {
+				right: 0;
+				background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="marquee-wrapper">
+			<div class="jquery-marquee">
+				<img src="1.svg" alt="" />
+				<img src="2.svg" alt="" />
+				<img src="3.svg" alt="" />
+				<img src="4.svg" alt="" />
+				<img src="5.svg" alt="" />
+				<img src="6.svg" alt="" />
+				<img src="7.svg" alt="" />
+				<img src="8.svg" alt="" />
+				<img src="9.svg" alt="" />
+				<img src="1.svg" alt="" />
+				<img src="2.svg" alt="" />
+				<img src="3.svg" alt="" />
+				<img src="4.svg" alt="" />
+				<img src="5.svg" alt="" />
+				<img src="6.svg" alt="" />
+				<img src="7.svg" alt="" />
+				<img src="8.svg" alt="" />
+				<img src="9.svg" alt="" />
+				<img src="1.svg" alt="" />
+				<img src="2.svg" alt="" />
+				<img src="3.svg" alt="" />
+				<img src="4.svg" alt="" />
+				<img src="5.svg" alt="" />
+				<img src="6.svg" alt="" />
+				<img src="7.svg" alt="" />
+				<img src="8.svg" alt="" />
+				<img src="9.svg" alt="" />
+			</div>
+		</div>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"
+			defer></script>
+
+		<script>
+			$(window).on('load', function () {
+				$('.marquee-wrapper').fadeIn('slow');
+				$('.jquery-marquee').marquee({
+					duration: 20000, // speed
+					gap: 0,
+					delayBeforeStart: 0,
+					direction: 'left',
+					duplicated: true, // continuous motion
+					pauseOnHover: true,
+					startVisible: true,
+					css3easing: 'linear',
+					// easing: 'linear', // works if you use jQuery easing plugin
+				});
+			});
+		</script>
+	</body>
+</html>
